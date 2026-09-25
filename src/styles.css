@@ -1,0 +1,785 @@
+:root {
+    --primary: #174A3A;
+    --secondary: #286B54;
+    --accent: #C59D5F;
+
+    --background: #F7F5EF;
+    --white: #FFFFFF;
+
+    --text: #24312B;
+    --text-light: #68736D;
+
+    --border: #DDD9CC;
+
+    --success: #2E6B4F;
+    --warning: #A97932;
+    --danger: #B84A4A;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #F7F5EF, #FBFAF6);
+}
+
+.login-box {
+    width: 100%;
+    max-width: 430px;
+    padding: 38px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(30, 41, 59, 0.1);
+}
+
+.login-icon,
+.brand-icon,
+.book-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+}
+
+.login-icon {
+    margin-bottom: 22px;
+}
+
+.small-title {
+    margin: 0 0 8px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login-box h1 {
+    margin: 0 0 8px;
+    font-size: 32px;
+}
+
+.login-text,
+.page-header p {
+    color: var(--text-light);
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+}
+
+.login-box label {
+    margin: 12px 0 7px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-box input {
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: var(--primary);
+}
+
+.main-button,
+.small-button,
+.logout-button {
+    border: 0;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+.main-button {
+    margin-top: 18px;
+    padding: 13px 18px;
+    background: var(--primary);
+    color: white;
+}
+
+.main-button:hover {
+    background: var(--secondary);
+}
+
+.small-button {
+    padding: 9px 13px;
+    background: #EEF3EE;
+    color: var(--primary);
+}
+
+.logout-button {
+    width: 100%;
+    padding: 10px;
+    background: #F9EAEA;
+    color: var(--danger);
+}
+
+.error-text {
+    margin: 12px 0 0;
+    color: var(--danger);
+    font-size: 13px;
+}
+
+.success-text {
+    margin: 15px 0 0;
+    color: var(--success);
+    font-weight: bold;
+}
+
+.login-demo {
+    margin-top: 22px;
+    padding: 12px;
+    background: #FBFAF6;
+    border-radius: 9px;
+}
+
+.login-demo p {
+    margin: 4px 0;
+    color: var(--text-light);
+    font-size: 11px;
+}
+
+.app-layout {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 16px;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 7px 24px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--secondary);
+}
+
+.brand strong,
+.brand span {
+    display: block;
+}
+
+.brand span {
+    margin-top: 4px;
+    color: #B9C5BE;
+    font-size: 11px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.navigation a {
+    padding: 11px 12px;
+    border-radius: 8px;
+    color: #D7DED8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: var(--secondary);
+    color: white;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.user-mini {
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 9px;
+    background: #123B2F;
+}
+
+.user-mini strong,
+.user-mini span {
+    display: block;
+}
+
+.user-mini strong {
+    font-size: 13px;
+}
+
+.user-mini span {
+    margin-top: 5px;
+    color: #B9C5BE;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.page {
+    max-width: 1300px;
+    margin: auto;
+    padding: 35px;
+}
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin: 0 0 7px;
+    font-size: 30px;
+}
+
+.page-header p:last-child {
+    margin: 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.stat-card,
+.content-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+}
+
+.stat-card {
+    padding: 20px;
+}
+
+.stat-card span,
+.stat-card p,
+.info-grid span {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.stat-card strong {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 30px;
+}
+
+.stat-card .small-stat {
+    font-size: 25px;
+}
+
+.stat-card p {
+    margin: 0;
+}
+
+.content-card {
+    padding: 22px;
+}
+
+.content-card h2 {
+    margin-top: 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info-grid div {
+    padding: 15px;
+    border-radius: 10px;
+    background: #FBFAF6;
+}
+
+.info-grid strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card-grid .content-card {
+    padding: 22px;
+}
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+.content-card h2 {
+    font-size: 19px;
+}
+
+.content-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.date-text,
+.tag {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.tag {
+    padding: 5px 8px;
+    border-radius: 8px;
+    background: #EEF3EE;
+}
+
+.book-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 14px;
+}
+
+.simple-table {
+    width: 100%;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #E5E1D7;
+}
+
+.table-row:last-child {
+    border-bottom: 0;
+}
+
+.table-heading {
+    color: var(--text-light);
+    font-size: 12px;
+    font-weight: bold;
+    background: #FBFAF6;
+}
+
+.student-active {
+    color: var(--success);
+    font-weight: bold;
+}
+
+.schedule-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.schedule-header h2 {
+    margin: 0;
+    font-size: 19px;
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lecture-item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr 90px;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    text-align: left;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: var(--white);
+}
+
+.lecture-item:hover {
+    border-color: var(--accent);
+    background: #F4F7F3;
+}
+
+.lecture-date strong,
+.lecture-date span,
+.lecture-info strong,
+.lecture-info span {
+    display: block;
+}
+
+.lecture-date span,
+.lecture-info span {
+    margin-top: 4px;
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.status {
+    padding: 7px 9px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.status.present,
+.attendance-button.present {
+    background: #E8F3EC;
+    color: var(--success);
+}
+
+.status.absent,
+.attendance-button.absent {
+    background: #F9EAEA;
+    color: var(--danger);
+}
+
+.modal-background {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.5);
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    padding: 28px;
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.2);
+}
+
+.modal h2 {
+    margin-top: 5px;
+}
+
+.modal p {
+    color: var(--text-light);
+}
+
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: 0;
+    background: transparent;
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+.teacher-attendance {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 18px;
+}
+
+.lecture-panel h2 {
+    margin-top: 0;
+}
+
+.teacher-lecture {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 9px;
+    padding: 13px;
+    text-align: left;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+}
+
+.teacher-lecture:hover,
+.teacher-lecture.active {
+    border-color: var(--primary);
+    background: #EEF3EE;
+}
+
+.teacher-lecture span {
+    color: var(--text-light);
+    font-size: 11px;
+}
+
+.attendance-panel h2 {
+    margin-bottom: 5px;
+}
+
+.attendance-panel > p {
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+.attendance-list {
+    margin-top: 20px;
+}
+
+.student-attendance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #E5E1D7;
+}
+
+.student-attendance strong,
+.student-attendance span {
+    display: block;
+}
+
+.student-attendance span {
+    margin-top: 4px;
+    color: var(--text-light);
+    font-size: 11px;
+}
+
+.attendance-button {
+    min-width: 90px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.attendance-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.attendance-bottom .main-button {
+    margin-top: 0;
+}
+
+.subject-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subject-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px;
+    border-radius: 10px;
+    background: #FBFAF6;
+}
+
+.subject-item span {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.menu-button {
+    display: none;
+}
+
+.menu-overlay {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .teacher-attendance {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 750px) {
+    .app-layout {
+        display: block;
+        min-height: 100vh;
+    }
+
+    .menu-button {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 1200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--white);
+        color: var(--primary);
+        font-size: 22px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 1050;
+        display: block;
+        background: rgba(0, 0, 0, 0.35);
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1100;
+        width: 280px;
+        height: 100vh;
+        min-height: 100vh;
+        padding: 20px 16px;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+    }
+
+    .sidebar.sidebar-open {
+        transform: translateX(0);
+    }
+
+    .brand {
+        padding-bottom: 20px;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .sidebar-bottom {
+        margin-top: auto;
+    }
+
+    .user-mini {
+        display: block;
+    }
+
+    .main-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .page {
+        width: 100%;
+        max-width: 100%;
+        padding: 70px 15px 25px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lecture-item {
+        grid-template-columns: 1fr;
+    }
+
+    .status {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 520px) {
+    .login-box {
+        padding: 25px;
+    }
+
+    .login-box h1 {
+        font-size: 27px;
+    }
+
+    .stats-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .table-card {
+        overflow-x: auto;
+    }
+
+    .simple-table {
+        min-width: 520px;
+    }
+
+    .attendance-bottom {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .attendance-bottom .main-button {
+        width: 100%;
+    }
+}
