@@ -2,6 +2,9 @@
     "name": "smart-student-portal-simple",
     "private": true,
     "version": "1.0.0",
+    "trustedDependencies": [
+    "esbuild"
+],
     "type": "module",
     "scripts": {
         "dev": "vite",
