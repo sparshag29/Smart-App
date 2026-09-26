@@ -31,6 +31,9 @@ function Events() {
                         <p>
                             {event.description}
                         </p>
+                        <button className="small-button" onClick={() => window.open(event.url, "_blank")}>
+                            Learn More
+                        </button>
                     </div>
                 ))}
             </div>

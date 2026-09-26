@@ -37,9 +37,8 @@ function TeacherLayout({ user, logoutUser }) {
                     }`}
                 >
                     <div className="brand">
-                        <div className="brand-icon">
-                            SP
-                        </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlOYaDjS0J5xWB7u1qUTP91nmwzh7zeIE_8CKe6GzJhwrRFCqWsVUh3U1O&s=10" className="brand-icon">
+                        </img>
 
                         <div>
                             <strong>

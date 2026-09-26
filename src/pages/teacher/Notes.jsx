@@ -31,8 +31,8 @@ function Notes() {
                         <p>
                             Subject: {note.subject}
                         </p>
-                        <button className="small-button">
-                            Manage Material
+                        <button className="small-button" onClick={() => window.open(note.url, "_blank")}>
+                            View Material
                         </button>
                     </div>
                 ))}

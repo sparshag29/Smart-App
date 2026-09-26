@@ -30,8 +30,8 @@ function Subjects({ user }) {
                         <p>
                             Computer Engineering
                         </p>
-                        <button className="small-button">
-                            Open Subject
+                        <button className="small-button" onClick={() => window.open('https://drive.google.com/file/d/1p2szurJbq_SpykEKEiQItDbdzC7ir9Vx/view?usp=sharing', "_blank")}>
+                            Open Subject Syllabus
                         </button>
                     </div>
                 ))}

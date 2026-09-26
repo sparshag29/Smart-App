@@ -14,6 +14,12 @@ function Exams() {
                 <p>
                     Check your upcoming examination schedule.
                 </p>
+                <button className="exam-button" onClick={() => window.open("https://kjsse-files.somaiya.edu/Time+Table+-+May-2026/19COE_+ESE+Examination+TT+MJ+2026_Rev303.pdf", "_blank")}>
+                    View Schedule
+                </button>
+                <button className="exam-button" onClick={() => window.print()}>
+                    Print Schedule
+                </button>
             </div>
 
             <div className="content-card table-card">

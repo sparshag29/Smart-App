@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
+import useSession from "./hooks/useSession";
 import StudentLayout from "./pages/student/StudentLayout";
 import TeacherLayout from "./pages/teacher/TeacherLayout";
 import StudentDashboard from "./pages/student/Dashboard";
@@ -18,14 +18,14 @@ import TeacherExams from "./pages/teacher/Exams";
 import TeacherStudents from "./pages/teacher/Students";
 
 function App() {
-    const [user, setUser] = useState(null);
+    const { user, login, logout } = useSession();
 
     const loginUser = (loggedInUser) => {
-        setUser(loggedInUser);
+        login(loggedInUser);
     };
 
     const logoutUser = () => {
-        setUser(null);
+        logout();
     };
 
     return (
@@ -57,26 +57,32 @@ function App() {
                     index
                     element={<StudentDashboard user={user} />}
                 />
+
                 <Route
                     path="events"
                     element={<StudentEvents />}
                 />
+
                 <Route
                     path="attendance"
                     element={<StudentAttendance />}
                 />
+
                 <Route
                     path="notes"
                     element={<StudentNotes />}
                 />
+
                 <Route
                     path="exams"
                     element={<StudentExams />}
                 />
+
                 <Route
                     path="library"
                     element={<StudentLibrary />}
                 />
+
                 <Route
                     path="placement"
                     element={
@@ -106,22 +112,27 @@ function App() {
                     index
                     element={<TeacherDashboard user={user} />}
                 />
+
                 <Route
                     path="subjects"
                     element={<TeacherSubjects user={user} />}
                 />
+
                 <Route
                     path="attendance"
                     element={<TeacherAttendance user={user} />}
                 />
+
                 <Route
                     path="notes"
                     element={<TeacherNotes user={user} />}
                 />
+
                 <Route
                     path="exams"
                     element={<TeacherExams user={user} />}
                 />
+
                 <Route
                     path="students"
                     element={<TeacherStudents />}

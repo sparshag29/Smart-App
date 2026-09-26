@@ -31,7 +31,7 @@ function Library() {
                         <p>
                             Author: {book.author}
                         </p>
-                        <button className="small-button">
+                        <button className="small-button" onClick={() => window.open(book.url, "_blank")}>
                             View Book
                         </button>
                     </div>

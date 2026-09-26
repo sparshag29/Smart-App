@@ -1,4 +1,5 @@
 import React from "react";
+import { placementResources } from "../../data";
 
 function Placement() {
     return (
@@ -16,48 +17,22 @@ function Placement() {
             </div>
 
             <div className="card-grid">
-                <div className="content-card">
-                    <span className="tag">
-                        Preparation
-                    </span>
-                    <h2>
-                        Aptitude Practice
-                    </h2>
-                    <p>
-                        Practice quantitative aptitude, logical reasoning and verbal ability.
-                    </p>
-                    <button className="small-button">
-                        Start Practice
-                    </button>
-                </div>
-                <div className="content-card">
-                    <span className="tag">
-                        Companies
-                    </span>
-                    <h2>
-                        Placement Drives
-                    </h2>
-                    <p>
-                        View upcoming company drives and their eligibility requirements.
-                    </p>
-                    <button className="small-button">
-                        View Drives
-                    </button>
-                </div>
-                <div className="content-card">
-                    <span className="tag">
-                        Career
-                    </span>
-                    <h2>
-                        Resume Building
-                    </h2>
-                    <p>
-                        Prepare your resume and improve your interview readiness.
-                    </p>
-                    <button className="small-button">
-                        Learn More
-                    </button>
-                </div>
+                {placementResources.map((resource) => (
+                    <div className="content-card" key={resource.title}>
+                        <span className="tag">
+                            {resource.tag}
+                        </span>
+                        <h2>
+                            {resource.title}
+                        </h2>
+                        <p>
+                            {resource.description}
+                        </p>
+                        <button className="small-button" onClick={() => window.open(resource.url, "_blank")}>
+                            {resource.buttonText}
+                        </button>
+                    </div>
+                ))}
             </div>
         </div>
     );

@@ -36,9 +36,8 @@ function Login({ loginUser }) {
     return (
         <div className="login-page">
             <div className="login-box">
-                <div className="login-icon">
-                    SP
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlOYaDjS0J5xWB7u1qUTP91nmwzh7zeIE_8CKe6GzJhwrRFCqWsVUh3U1O&s=10" className="big-icon">
+                </img>
                 <p className="small-title">
                     SMART STUDENT PORTAL
                 </p>
@@ -54,6 +53,7 @@ function Login({ loginUser }) {
                         Email
                     </label>
                     <input
+                        id="email"
                         type="email"
                         value={email}
                         onChange={(event) => setEmail(event.target.value)}
@@ -65,6 +65,7 @@ function Login({ loginUser }) {
                         Password
                     </label>
                     <input
+                        id="password"
                         type="password"
                         value={password}
                         onChange={(event) => setPassword(event.target.value)}
@@ -84,15 +85,27 @@ function Login({ loginUser }) {
                     >
                         Sign In
                     </button>
+                    <button
+                        className="google-button"
+                    >
+                        <img className="google-icon" src="https://static.vecteezy.com/system/resources/previews/010/353/285/non_2x/colourful-google-logo-on-white-background-free-vector.jpg" alt="" />
+                        <p>Sign In with Google</p>
+                    </button>
                 </form>
 
                 <div className="login-demo">
-                    <p>
+                    <button className="demo-button" onClick={() => {
+                        setEmail("student@portal.com");
+                        setPassword("1234");
+                    }}>
                         Student: student@portal.com / 1234
-                    </p>
-                    <p>
+                    </button>
+                    <button className="demo-button" onClick={() => {
+                        setEmail("teacher@portal.com");
+                        setPassword("1234");
+                    }}>
                         Teacher: teacher@portal.com / 1234
-                    </p>
+                    </button>
                 </div>
             </div>
         </div>

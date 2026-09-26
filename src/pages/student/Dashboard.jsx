@@ -64,7 +64,7 @@ function Dashboard({ user }) {
 
             <div className="content-card">
                 <h2>
-                    Quick Information
+                    Information
                 </h2>
                 <div className="info-grid">
                     <div>
